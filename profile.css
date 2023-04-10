@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #1283da;
+}
+
+.form-input label {
+  display: block;
+  width: 45%;
+  height: 45px;
+  margin-left: 25%;
+  line-height: 50px;
+  text-align: center;
+  background: #1172c2;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-input {
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+    3px 3px 7px rgba(94, 104, 121, 0.377);
+  margin-bottom: 20px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+  max-width: 100px;
+  max-height: 100px;
+  top: 50%;
+  left: 50%;
+  border: 5px solid white; /* เพิ่มขอบข้างนอก */
+  padding: 10px; /* เพิ่มระยะห่างระหว่างขอบกับรูป */
+}
+
+input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #1172c2;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #135eab;
+}

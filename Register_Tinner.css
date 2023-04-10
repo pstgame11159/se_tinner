@@ -1,0 +1,71 @@
+
+
+.gradient-custom-3 {
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(254, 116, 85,0.5), rgba(251, 43, 122, 0.5));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(254, 116, 85,0.85), rgba(251, 43, 122, 0.85))
+}
+.gradient-custom-4 {
+/* fallback for old browsers */
+background: #84fab0;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(254, 116, 85,1), rgba(251, 43, 122, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(254, 116, 85,1), rgba(251, 43, 122, 1))
+}
+
+/* Adjust font size and line height for small screens */
+@media (max-width: 576px) {
+  h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .form-outline {
+    font-size: 14px;
+  }
+
+  .form-check-label {
+    font-size: 14px;
+  }
+
+  .btn-block {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+/* Center the form and card on larger screens */
+@media (min-width: 992px) {
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 500px;
+    border-radius: 15px;
+  }
+}
+
+/* Adjust spacing for medium and large screens */
+@media (min-width: 768px) {
+  .card-body {
+    padding: 50px;
+  }
+
+  .form-outline {
+    margin-bottom: 30px;
+  }
+
+  .form-check-inline {
+    margin-right: 20px;
+  }
+}
