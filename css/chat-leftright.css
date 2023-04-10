@@ -1,0 +1,18 @@
+ .chat-container {
+  height: 300px; /* set a fixed height for the container to enable scrolling */
+  overflow-y: scroll; /* enable vertical scrolling */
+}
+
+
+
+
+
+.chat-messages li {
+  margin-bottom: 10px; /* add some margin between each chat message */
+	 overflow: auto;
+}
+ 
+
+
+
+ 

@@ -28,9 +28,32 @@ if(isset($_POST['signin']))
             
 
 
-            echo "<script>alert('เข้าสู่ระบบสำเร็จ');
-            window.location.href='chat2.php';
-            </script>";
+
+
+            ?>
+
+
+<body onload="showAlert()">
+ <script src="sweetalert2.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+</body>
+<script>
+function showAlert() {
+  Swal.fire({
+    position: 'top-middle',
+    icon: 'success',
+    title: 'Login success',
+    showConfirmButton: false,
+    timer: 1500
+  }).then(function() {
+    window.location.href = "index.php";
+  });
+}
+</script>
+
+            <?php
         }
         else
         {
@@ -48,3 +71,5 @@ if(isset($_POST['signin']))
     }
 }
 ?>
+
+

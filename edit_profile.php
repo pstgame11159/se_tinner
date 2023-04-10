@@ -1,5 +1,9 @@
 <?php
     session_start();
+	if (!isset($_SESSION['admin_login'])) {
+        $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
+        header('location: login.php');
+    }
     require_once 'connection/server.php';
 	$name = $_SESSION['fullname'];
 	$age = $_SESSION['age'];
@@ -18,7 +22,7 @@
 </head>
 <body>
 	<div class="container">
-	<a href="index.php" class="link-primary">ย้อนกลับ</a>
+	<a href="index.php" class="link-primary">Back</a>
 		<h1>Tinder Profile Settings</h1>
 		
 		

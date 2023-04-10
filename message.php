@@ -59,7 +59,7 @@
 
   </style>  
 </head>
-<a href="chat2.php" class="link-primary">ย้อนกลับ</a>
+<a href="chat2.php" class="link-primary">Back</a>
 <body>
 
         <iframe src="chat_realtime.php" title="description" width="100%" scrolling="" height="800px" scrolling="no" frameborder="0" ></iframe>

@@ -2,20 +2,27 @@
 ob_start();
 session_start();
 session_destroy();
-echo "<script>
-$(document).ready(function() {
-    Swal.fire({
-        title: 'Logout',
-        text: 'ออกจากระบบสำเร็จ !',
-        icon: 'success',
-        timer: 3000,
-        showConfirmButton: false
-    });
-})
-</script>";
-header("refresh:2; url=index.php");
 
 ?>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<body onload="showAlert()">
+ <script src="sweetalert2.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- เนื้อหาของหน้าเว็บ -->
+</body>
+<script>
+function showAlert() {
+  Swal.fire({
+    position: 'top-middle',
+    icon: 'success',
+    title: 'Logout success',
+    showConfirmButton: false,
+    timer: 1500
+  }).then(function() {
+    // เมื่อกด OK หรือ หมดเวลา
+    window.location.href = "index.php";
+  });
+}
+</script>

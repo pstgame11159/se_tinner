@@ -90,7 +90,7 @@
                 <input type="file" name="upload-img" class="form-control mb-4" required >
 
                 <div class="d-flex justify-content-center">
-                  <button type="submit" name="register_db"  class="btn btn-block btn-lg gradient-custom-4 text-black">สมัครสมาชิก</button>
+                  <button type="submit" name="register_db"  class="btn btn-block btn-lg gradient-custom-4 text-black">Sign up</button>
                 </div>
 
                 

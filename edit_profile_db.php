@@ -61,9 +61,28 @@
             $i++;
     
         }
-        echo "<script>alert('แก้ไขเสร็จสิิ้น');
-        window.location.href='edit_profile.php';
-        </script>";
+
 
         }
  ?>
+ <body onload="showAlert()">
+ <script src="sweetalert2.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- เนื้อหาของหน้าเว็บ -->
+</body>
+<script>
+function showAlert() {
+  Swal.fire({
+    position: 'top-middle',
+    icon: 'success',
+    title: 'Update success',
+    showConfirmButton: false,
+    timer: 1500
+  }).then(function() {
+    // เมื่อกด OK หรือ หมดเวลา
+    window.location.href = "edit_profile.php";
+  });
+}
+</script>

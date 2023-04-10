@@ -100,8 +100,8 @@
                   </span>
                 </button>
                 <div class="dropdown-content">
-                <a href="edit_profile.php">ตั้งค่าโปรไฟล์</a>
-                  <a href="logout.php">ออกจากระบบ</a>
+                <a href="edit_profile.php">Manage Profile</a>
+                  <a href="logout.php">Logout</a>
                 </div>
                 
               </div>

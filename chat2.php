@@ -137,12 +137,12 @@
         
         function deletefileConfirm(ID) {
             Swal.fire({
-                title: 'คุณต้องการ Unmatch ใช่ไหม ? ',
+                title: 'Do you want to Unmatch ? ',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'ยืนยัน',
-                cancelButtonText: 'ยกเลิก !',
+                confirmButtonText: 'Confirm',
+                cancelButtonText: 'Cancle !',
                 showLoaderOnConfirm: true,
                 preConfirm: function() {
                     return new Promise(function(resolve) {

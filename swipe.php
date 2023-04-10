@@ -15,6 +15,7 @@ include "connection/server.php";
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/swipe.css" />
 
