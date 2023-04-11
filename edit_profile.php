@@ -68,7 +68,7 @@
 			?>
 
 			<div class="form-input">
-				<label for="file-upload-<?php echo $i; ?>">Changes 1</label>
+				<label for="file-upload-<?php echo $i; ?>">Changes</label>
 				<img id="preview-<?php echo $i; ?>" src="<?php echo $file; ?>"><br>
 				<input type="file" name="profile-pic-<?php echo $i; ?>" id="file-upload-<?php echo $i; ?>" onchange="previewImage(<?php echo $i; ?>)">
 			</div>

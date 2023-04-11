@@ -15,7 +15,6 @@ include "connection/server.php";
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/swipe.css" />
 
@@ -23,9 +22,9 @@ include "connection/server.php";
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
     
     <style>
-.mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:20px;width:20px;padding:0}
+
 </style>
     <?php include  'include/navbar.php'?>                   
     <title>Document</title>
@@ -45,6 +44,7 @@ include "connection/server.php";
         $sql_qury = mysqli_query($conn,$qury);
         while($row2 = mysqli_fetch_array($sql_qury)){
             $u_id = $row2['u_id'];
+            $username =$row2['username'];
 
             $sql = "SELECT * FROM swipe WHere u_swipe = '$u_id_s' AND o_swipe = '$u_id' ";
             $result = mysqli_query($conn,$sql);
@@ -56,35 +56,35 @@ include "connection/server.php";
   <center> 
   <div class="w3-content w3-display-container">
   <?php
-  $i = 1;
-  while($i <= 6) {
-?>
-  <img class="mySlides" src="upload_gallery/<?php echo $row2['username']."_".$i; ?>.jpg" style="width:50%;height:450px;">
-  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-    <?php
-      for($j = 1; $j <= 6; $j++) {
+					$i = 1;
+					while($i<=6)
+					{
+			
+						$file = 'upload_gallery/'.$username.'_'.$i.'.jpg';
 
+              if (file_exists($file)) {?>
 
-						$file = 'upload_gallery/'.$row2['username'].'_'.$j.'.jpg';
-
-						if (file_exists($file)) {
-    ?>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(<?php echo $j ;?>)"></span>
-    <?php 
-
-						} 
+<div class="form-input">
+				<img id="preview-<?php echo $i; ?>" src="<?php echo $file; ?>" style="width:60%;height:60%;"><br>
+			</div>
+              <?php
+              } 
             
-            
-            } ?>
-  </div>
-  <?php $i++; } ?>
+			?>
+
+
+
+			<?php 
+					$i++;
+					}   
+			?>
 
 </div>
 
 </center>
 
-  <h3></h3>
-  <h4><?php echo $row2['fullname']; ?></h4>
+  <h1><?php echo $row2['fullname']; ?></h1>
+  <h4> Age:<?php echo  $row2['age'] ?> </h4>
   <p> <?php echo  $row2['bio'] ?> </p>
 </div>
 <?php
@@ -294,9 +294,7 @@ love.addEventListener('click', loveListener);
 var slideIndex = 1;
 showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+
 
 function currentDiv(n) {
   showDivs(slideIndex = n);
@@ -307,7 +305,7 @@ function showDivs(n) {
   var x = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
   if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
+  if (n < 0) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
@@ -317,4 +315,5 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " w3-white";
 }
+
 </script>

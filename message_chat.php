@@ -37,14 +37,18 @@
 								
 								$original_plaintext = openssl_decrypt($ciphertext_raw, $cipher, $key, $options=OPENSSL_RAW_DATA, $iv); // ถอดรหัสข้อความ
 								$calcmac = hash_hmac('sha256', $ciphertext_raw, $key, $as_binary=true); // สร้าง HMAC สำหรับตรวจสอบความถูกต้องของข้อค
-								
-								
+								$uid = $row2['sender_userid'];
+
+								$qury_users= "SELECT *FROM users WHere 	u_id = '$uid ' ";
+								$sql_qury_users = mysqli_query($conn,$qury_users);
+								$row_users = mysqli_fetch_array($sql_qury_users);
+
 								if($row2['sender_userid']==$u_id && $row2['reciever_userid']==$_SESSION['reciever_userid']){
                             ?>
 					
 						<div class="card-box2">
-						<img class="user" style="width: 30px; height: 30px" src="images/<?php echo $row2['sender_userid'];?>.jpg">
-						<span><?php echo $row2['sender_userid'];?>
+						<img class="user" style="width: 30px; height: 30px" src="upload_gallery/<?php echo $row_users['username']."_1.jpg"; ?>">
+						<span><?php echo $row_users['username'];?>
 						<ul class="chat-messages2">
 							<li class="message2"><?php echo $original_plaintext;?></li>
 						</ul>
@@ -56,8 +60,8 @@
 							?>	
 
 					<div class="card-box1"  >
-					<span><?php echo $row2['sender_userid'];?>
-						<img class="user" style="width: 30px; height: 30px" src="images/<?php echo $row2['sender_userid'];?>.jpg">
+					<span><?php echo $row_users['username'];?>
+						<img class="user" style="width: 30px; height: 30px" src="upload_gallery/<?php echo $row_users['username']."_1.jpg"; ?>">
 					<ul class="chat-messages">
 						<li class="message"><?php echo $original_plaintext  ;?></li>
 					</ul>

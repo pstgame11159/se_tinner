@@ -60,7 +60,7 @@
                 
                 move_uploaded_file($tmp_name,$path.$name_file);
                 
-                $sql_register = "INSERT INTO users (fullname,sex,age,address_s, phone_number, email, username, password_s,bio,urole)value('$name','$sex','$age','$address','$phone_number','$email','$username','$password','ไม่ได้ใส่','$cus_level')";
+                $sql_register = "INSERT INTO users (fullname,sex,age,address_s, phone_number, email, username, password_s,bio,urole)value('$name','$sex','$age','$address','$phone_number','$email','$username','$password','-','$cus_level')";
 
                 mysqli_query($conn,$sql_register);
 
